@@ -2,17 +2,16 @@ import { Notify } from 'notiflix/build/notiflix-notify-aio';
 
 const submitBtn = document.querySelector("button[type=submit]");
 const formEl = document.querySelector(".form");
-
+let refs = {};
 formEl.addEventListener('input', (event)=>{
   event.preventDefault();
   const elements = event.currentTarget;
-  return refs = {
+  refs = {
                 delay:Number(elements.delay.value),
                 step:Number(elements.step.value),
                 amount:Number(elements.amount.value)
-        }
-  })
-
+  };
+})
 const createPromise = function (position, delay)  {
     const shouldResolve = Math.random() > 0.3;
     return new Promise((resolve, rejected) => {

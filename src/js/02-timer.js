@@ -42,7 +42,7 @@ getBtnStartEl.addEventListener('click', () => {
   getBtnStartEl.disabled = true;
   Notify.success('Начинаем отсчет');
   // console.log(dateCounter);  
-  timerId = setInterval(() => {
+  const timerId = setInterval(() => {
     
   if (dateCounter - 600 > 0) {
       convertData(convertMs(dateCounter));
